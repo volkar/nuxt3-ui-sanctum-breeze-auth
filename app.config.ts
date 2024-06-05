@@ -22,6 +22,13 @@ export default defineAppConfig({
 				fluid: "text-md",
 			},
 		},
+		notification: {
+			progress: {
+				base: "absolute bottom-0 end-0 start-0 h-1",
+				background: "notification-progress-bar",
+			},
+			background: "notification-bg",
+		},
 	},
 	siteTitle: "Nuxt Breeze",
 })

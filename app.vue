@@ -215,4 +215,18 @@
 	.primary-color {
 		color: var(--primary-color);
 	}
+
+	/* --- Notifications --- */
+
+	.notification-progress-bar {
+		background-image: var(--gradient);
+	}
+
+	.notification-bg {
+		background: #ffffff;
+	}
+
+	html.dark .notification-bg {
+		background: #0b0f17;
+	}
 </style>

@@ -1,6 +1,6 @@
 # Nuxt 3 UI for Laravel Breeze auth
 
-![Nuxt 3 SPA](https://github.com/volkar/nuxt3-ui-sanctum-breeze-auth/blob/main/prev-1.jpg?raw=true)
+![Nuxt 3 SPA](https://github.com/volkar/nuxt3-ui-sanctum-breeze-auth/blob/main/prev-1.jpg?raw=true&c=1)
 
 [Nuxt 3](https://nuxt.com/) SPA boilerplate for consume all of [Laravel Breeze API](https://laravel.com/docs/11.x/starter-kits#breeze-and-next) default installation (sign in, create account, confirm email, forgot password, reset password, get user data) with auth-guarded dashboard and all redirects.
 
@@ -27,7 +27,7 @@
 ## Screenshots
 
 Index page
-![Index page](https://github.com/volkar/nuxt3-ui-sanctum-breeze-auth/blob/main/prev-1.jpg?raw=true)
+![Index page](https://github.com/volkar/nuxt3-ui-sanctum-breeze-auth/blob/main/prev-1.jpg?raw=true&c=1)
 Create account
 ![Create account](https://github.com/volkar/nuxt3-ui-sanctum-breeze-auth/blob/main/prev-2.jpg?raw=true)
 Email verification
