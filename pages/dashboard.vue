@@ -18,7 +18,7 @@
 <template>
 	<div class="typo">
 		<h1>Your totally private<br /><span class="gradient">Verified dashboard</span></h1>
-		<UAlert v-if="isJustVerified == 1" class="mb-8" title="You successfully verified your email address!" color="sky" variant="soft" />
+		<UAlert v-if="isJustVerified == '1'" class="mb-8" title="You successfully verified your email address!" color="sky" variant="soft" />
 		<UserBlock />
 	</div>
 </template>
