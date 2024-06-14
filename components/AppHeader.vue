@@ -2,12 +2,17 @@
 	import type { User } from "~/models/user"
 
 	const toast = useToast()
-	const { user, logout } = useSanctumAuth<User>()
+	const { user, logout, refreshIdentity } = useSanctumAuth<User>()
 	const fixedHeader = false
 	const mobileMenuOpened = ref(false)
 
-	const handleLogout = () => {
-		logout().then(logoutSuccessSequence)
+	const handleLogout = async () => {
+		navigateTo("/")
+		logoutSuccessSequence()
+		await refreshIdentity()
+		if (user) {
+			logout()
+		}
 	}
 
 	const logoutSuccessSequence = () => {

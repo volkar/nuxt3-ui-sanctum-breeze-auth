@@ -28,8 +28,12 @@ export default defineNuxtConfig({
 	sanctum: {
 		baseUrl: "http://127.0.0.1:8000",
 		origin: "http://127.0.0.1:3000",
+		redirectIfAuthenticated: true,
 		redirect: {
-			onGuestOnly: "/dashboard",
+			keepRequestedRoute: true,
+			onLogin: "/dashboard",
+			onAuthOnly: "/login",
+			onGuestOnly: "/",
 		},
 	},
 
