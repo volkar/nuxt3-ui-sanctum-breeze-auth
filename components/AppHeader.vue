@@ -7,11 +7,14 @@
 	const mobileMenuOpened = ref(false)
 
 	const handleLogout = async () => {
-		navigateTo("/")
-		logoutSuccessSequence()
-		await refreshIdentity()
-		if (user) {
-			logout()
+		try {
+			await refreshIdentity()
+			await logout()
+			logoutSuccessSequence()
+		} catch (e) {
+			// Refresh identity failed and user is nulled, navigate to index page
+			navigateTo("/")
+			logoutSuccessSequence()
 		}
 	}
 
