@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 		host: "127.0.0.1",
 		port: 3000,
 	},
-	devtools: { enabled: false },
+	devtools: { enabled: true },
 	modules: ["@nuxt/ui", "nuxt-auth-sanctum", "@nuxt/eslint"],
 	eslint: {
 		config: {

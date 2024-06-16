@@ -2,7 +2,6 @@
 	import { z } from "zod"
 	import type { FormSubmitEvent, Form } from "#ui/types"
 
-	const toast = useToast()
 	const sanctumFetch = useSanctumClient()
 
 	const formSending = ref(false)
@@ -41,7 +40,7 @@
 
 	const forgotPasswordSuccessSequence = () => {
 		formSending.value = false
-		toast.add({ title: "Password Reset Link Sent", description: "We have emailed your password reset link!", timeout: 5000 })
+		showNotificationWithDescription("Password reset link sent", "We have emailed your password reset link!", 5000)
 	}
 </script>
 

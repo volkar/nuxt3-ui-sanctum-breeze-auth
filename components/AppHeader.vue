@@ -1,25 +1,12 @@
 <script lang="ts" setup>
 	import type { User } from "~/models/user"
 
-	const toast = useToast()
-	const { user, logout, refreshIdentity } = useSanctumAuth<User>()
+	const { user } = useSanctumAuth<User>()
 	const fixedHeader = false
 	const mobileMenuOpened = ref(false)
 
 	const handleLogout = async () => {
-		try {
-			await refreshIdentity()
-			await logout()
-			logoutSuccessSequence()
-		} catch (e) {
-			// Refresh identity failed and user is nulled, navigate to index page
-			navigateTo("/")
-			logoutSuccessSequence()
-		}
-	}
-
-	const logoutSuccessSequence = () => {
-		toast.add({ title: "You have been logged out", timeout: 3000 })
+		logoutUser()
 	}
 </script>
 
@@ -54,7 +41,7 @@
 						<ULink to="/dashboard" class="text flex items-center gap-1"><UIcon name="i-mdi-account-circle-outline" class="text-lg" /> {{ user?.name }}</ULink>
 					</li>
 					<li v-if="user" class="lg:mr-6 border-b-gray-300 dark:border-b-gray-800 border-b-2 lg:border-0 py-4 lg:py-0">
-						<ULink to="/" class="text" @click.prevent="handleLogout">Sign out</ULink>
+						<ULink to="/logout" class="text" @click.prevent="handleLogout">Sign out</ULink>
 					</li>
 					<li class="m-0 py-3 lg:py-0">
 						<ClientOnly>

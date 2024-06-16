@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 	const sanctumFetch = useSanctumClient()
-	const toast = useToast()
 
 	async function sendEmailNotification() {
 		try {
@@ -10,9 +9,9 @@
 				await navigateTo(response.headers.get("Location"))
 			}
 
-			toast.add({ description: "Done! Check your inbox for the verification email.", color: "sky" })
+			showNotification("Done! Check your inbox for the verification email.")
 		} catch (error) {
-			toast.add({ description: "Failed to send the verification email. Please try again later.", color: "red" })
+			showErrorNotification("Failed to send the verification email. Please try again later.")
 		}
 	}
 </script>

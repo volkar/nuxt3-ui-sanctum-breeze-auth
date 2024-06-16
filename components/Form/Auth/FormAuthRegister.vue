@@ -2,8 +2,6 @@
 	import { z } from "zod"
 	import type { FormSubmitEvent, Form } from "#ui/types"
 
-	const toast = useToast()
-
 	const formSending = ref(false)
 
 	const sanctumConfig = useSanctumConfig()
@@ -59,7 +57,7 @@
 
 	const registerSuccessSequence = () => {
 		formSending.value = false
-		toast.add({ title: "Account have been successfully created", timeout: 3000 })
+		showNotification("Account have been successfully created")
 	}
 </script>
 

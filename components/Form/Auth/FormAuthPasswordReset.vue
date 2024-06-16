@@ -2,8 +2,6 @@
 	import { z } from "zod"
 	import type { Form, FormSubmitEvent } from "#ui/types"
 
-	const toast = useToast()
-
 	const formSending = ref(false)
 
 	interface Props {
@@ -61,7 +59,7 @@
 
 	const resetPasswordSuccessSequence = () => {
 		formSending.value = false
-		toast.add({ title: "Password have been changed successfully", timeout: 3000 })
+		showNotification("Password have been changed successfully")
 	}
 </script>
 

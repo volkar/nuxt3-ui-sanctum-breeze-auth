@@ -2,8 +2,6 @@
 	import { z } from "zod"
 	import type { FormSubmitEvent, Form } from "#ui/types"
 
-	const toast = useToast()
-
 	interface Props {
 		token?: string
 	}
@@ -49,7 +47,7 @@
 
 	const loginSuccessSequence = () => {
 		formSending.value = false
-		toast.add({ title: "You have been logged in", timeout: 3000 })
+		showNotification("You have been logged in")
 	}
 </script>
 

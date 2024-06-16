@@ -218,7 +218,7 @@
 
 	/* --- Notifications --- */
 
-	.notification-progress-bar {
+	.notification-progress-bar.bg-primary-500 {
 		background-image: var(--gradient);
 	}
 

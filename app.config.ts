@@ -1,3 +1,6 @@
+import type { FetchContext } from "ofetch"
+import type { NuxtApp } from "#app"
+
 export default defineAppConfig({
 	ui: {
 		primary: "sky",
@@ -31,4 +34,17 @@ export default defineAppConfig({
 		},
 	},
 	siteTitle: "Nuxt Breeze",
+	sanctum: {
+		interceptors: {
+			onResponse: async (app: NuxtApp, ctx: FetchContext) => {
+				if (ctx.response?.status === 401) {
+					// Session lost, force logout
+					if (!app.ssrContext) {
+						// Client only
+						app.$router.push("/logout")
+					}
+				}
+			},
+		},
+	},
 })
