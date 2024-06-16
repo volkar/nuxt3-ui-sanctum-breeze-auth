@@ -57,7 +57,9 @@
 						<ULink to="/" class="text" @click.prevent="handleLogout">Sign out</ULink>
 					</li>
 					<li class="m-0 py-3 lg:py-0">
-						<HeaderColorSchemeSwitcher />
+						<ClientOnly>
+							<HeaderColorSchemeSwitcher />
+						</ClientOnly>
 					</li>
 				</ul>
 			</div>
