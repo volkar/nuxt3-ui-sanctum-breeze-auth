@@ -12,6 +12,7 @@
 -   Middleware for users with confirmed emails (enabled by default on dashboard page)
 -   Displays field errors and success messages
 -   Page loading animation and form sending animation
+-   Composable to retrieve data from API with cache
 -   Adaptive main menu
 -   Dark and Light color schemes and switch
 -   Markup and styles styles from [Amethyst Lite](https://github.com/volkar/amethyst-lite)
@@ -128,6 +129,12 @@ npm run dev
 
 It will run on http://127.0.0.1:3000 by default.
 Open `http://127.0.0.1:3000` in browser and you good to go!
+
+## Cached data composable
+
+The example page `pages\data.vue` uses the composable `useApiGetCached` for Laravel's endpoint `api/user` with a cache time of 10 seconds. New data will only be fetched from the API after this time has elapsed.
+
+There is another composable `useApiGet` without cache to fetch data on every request without cache.
 
 ## Contact me
 

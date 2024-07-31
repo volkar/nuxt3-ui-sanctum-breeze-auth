@@ -26,6 +26,9 @@
 					<li class="lg:mr-6 border-b-gray-300 dark:border-b-gray-800 border-b-2 lg:border-0 py-4 lg:py-0" v-if="user">
 						<ULink to="/dashboard" class="text" active-class="primary-color">Dashboard</ULink>
 					</li>
+					<li class="lg:mr-6 border-b-gray-300 dark:border-b-gray-800 border-b-2 lg:border-0 py-4 lg:py-0" v-if="user">
+						<ULink to="/data" class="text" active-class="primary-color">Data</ULink>
+					</li>
 				</ul>
 			</div>
 
