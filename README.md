@@ -51,13 +51,13 @@ Install Laravel Breeze (API version), do all that standard stuff with migrations
 Copy this project to folder of your choice
 
 ```shell
-gh repo clone volkar/vue-3-spa-laravel-breeze-api
+git clone https://github.com/volkar/nuxt3-ui-sanctum-breeze-auth.git
 ```
 
 Go to folder
 
 ```shell
-cd vue-3-spa-laravel-breeze-api
+cd nuxt3-ui-sanctum-breeze-auth
 ```
 
 Install dependencies
