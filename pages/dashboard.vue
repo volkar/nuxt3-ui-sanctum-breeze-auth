@@ -2,7 +2,7 @@
 	import type { User } from "~/models/user"
 
 	definePageMeta({
-		middleware: ["sanctum:verified"],
+		middleware: ["verified-user"],
 	})
 
 	useSeoMeta({

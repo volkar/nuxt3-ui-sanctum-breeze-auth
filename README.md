@@ -90,7 +90,7 @@ class User extends Authenticatable implements MustVerifyEmail
 Or if you want to allow unverified users to access dashboard - change middleware at `/pages/dashboard.vue`
 
 ```ts
-middleware: ["sanctum:verified"]
+middleware: ["verified-user"]
 ```
 
 to

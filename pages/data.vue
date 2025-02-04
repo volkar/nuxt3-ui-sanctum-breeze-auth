@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 	definePageMeta({
-		middleware: ["sanctum:verified"],
+		middleware: ["verified-user"],
 	})
 
 	useSeoMeta({
